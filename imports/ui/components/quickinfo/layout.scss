@@ -1,0 +1,42 @@
+.c-info{
+  display: flex;
+  flex-direction: column;
+  color: #202020;
+
+  .c-info__item{
+    padding: 3.5em 3em;
+
+    .c-info__item-title{
+      display: flex;
+      align-items: center;
+    }
+    .c-info__item-content{
+      padding-left: 46px;
+    }
+  }
+}
+
+@media screen and (min-width: 850px) {
+
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 1440px) {
+
+}
+
+/*
+.c-info{
+  .c-info__item{
+    .c-info__item-title{
+
+    }
+    .c-info__item-content{
+
+    }
+  }
+}
+*/

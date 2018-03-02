@@ -1,0 +1,53 @@
+.cover-widget{
+  .h1 {
+    color: #d00;
+    font-weight: 500;
+    font-kerning: normal;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.822rem;
+    line-height: 1.3;
+  }
+
+  .h2{
+    font-weight: 500;
+    font-kerning: normal;
+    font-family: 'Lato', sans-serif;
+
+    font-size: 1.575rem;
+    font-weight: 400;
+    color: #808080;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    text-transform: none;
+    margin-top: -3px
+  }
+}
+
+@media screen and (min-width: 928px) {
+  .cover-widget{
+    .h1 {
+      font-size:2.822rem;
+    }
+
+    .h2{
+      font-size: 1.793rem;
+      margin-top: -4px
+    }
+  }
+}
+
+@media screen and (min-width: 1328px) {
+  .cover-widget{
+    .h1 {
+      font-size: 3.213rem;
+    }
+
+    .h2{
+      font-size: 1.913rem;
+
+    }
+  }
+}

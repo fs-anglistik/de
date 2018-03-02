@@ -1,0 +1,58 @@
+<template name="faq">
+  <div class="c-faq">
+    <div class="o-login">
+      <!--
+      {{> loginButtons}}
+      -->
+    </div>
+    <div class="c-article__head">
+      <div class="c-article__icon">
+        <img alt="" src="/resources/img/canada.jpg" />
+      </div>
+      <div class="c-article__title">
+        <h1>Frequently Asked Questions</h1>
+      </div>
+    </div>
+    <div class="c-artilce__content" style="display: flex; flex-direction: column">
+
+
+      <div class="c-category">
+        {{#if currentUser}}
+        <div class="c-category__header"><button class="c-category__toggle"></button><div class="c-category__title c-category__title--add" contentEditable=true data="Hier tippen um Kategorie hinzuzufügen"></div><button class="c-category__button c-category__button--add">+</button></div>
+        {{/if}}
+        {{#each faqGroup}}
+        <div class="c-category__header"><button class="c-category__toggle {{isSelected}}"></button><h1 class="c-category__title">{{title}}</h1>{{#if currentUser}}<button class="c-category__button--remove">-</button>{{/if}}</div>
+        {{#if isVisible}}
+        <div class="c-category__content">
+
+          {{#if currentUser}}
+          <!--addQuestion Panel-->
+          <form class="c-item c-item--add">
+            <h3>Neue Frage erstellen</h3>
+            <input class="c-item__question" type="text" name="question" placeholder="Hier neue Frage erstellen">
+            <input class="c-item__answer" type="text" name="answer" placeholder="Hier neue Antwort erstellen">
+            <input class="c-item__button" type="submit" value="Speichern">
+          </form>
+          <!--end-->
+          {{/if}}
+          {{#each faqItems _id}}
+          <div class="c-item">
+            <div class="c-item__question"><button class="c-item__toggleQuestion"></button><span id="question-{{_id}}" class="c-item__question-content">{{question}}</span>
+            </div>
+            <div id="answer-{{_id}}" class="c-item__answer">{{answer}}
+            </div>
+            {{#if currentUser}}
+            <div class="c-item__edit"><a href="" class="c-item__button--delete">löschen</a> &nbsp;|&nbsp; <a href="" id="edit-{{_id}}" class="c-item__button--edit">bearbeiten</a> &nbsp;|&nbsp; <a href="" class="c-item__button--save">speichern</a> &nbsp;|&nbsp; <a href="" class="c-item__button--publish">veröffentlichen</a>
+            </div>
+            {{/if}}
+          </div>
+          {{/each}}
+        </div>
+          {{/if}}
+          {{/each}}
+      </div>
+
+
+    </div>
+  </div>
+</template>

@@ -1,0 +1,47 @@
+<template name="Navigation2">
+  <div class="submenu">
+    <ul class="sub-navigation">
+        <li><a href="#">Blog</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="#">Linklist</a></li>
+      </ul>
+    <ul class="meta-navigation">
+            <li><img src="http://i63.tinypic.com/fd60km.png"> English <i class="fa fa-angle-down"></i></li>
+            <li><i class="fa fa-facebook"></i></li>
+            <li><i class="fa fa-envelope"></i></li>
+            <li class="login"><i class="fa fa-sign-in"></i></li>
+
+    </ul>
+  </div>
+  <div class="navigation">
+    <div class="navigation-toggle"></div>
+    <div class="navigation-logo">
+      <a href="/"><img class="c-app__logo" alt="" src="/resources/img/logo.png" /></a>
+    </div>
+      <ul class="navigation-menu">
+        <li class="navigation-item"><a href="/">Who we are</a></li>
+        <li class="navigation-item"><a href="">What we do</a>
+        </li>
+        <li class="navigation-item"><a href="/faq">Our events</a></li>
+        <li class="navigation-item drop-down"><a href="">Get involved</a>
+            <ul class="drop-down-ul">
+              <li class="drop-down-li"><a href="">Protokolle</a></li>
+              <li class="drop-down-li"><a href="">Satzung</a></li>
+            </ul>
+        </li>
+        <li class="navigation-item"><a href="/faq">Ressources</a></li>
+      </ul>
+
+    <div class="navigation-login"></div>
+    <div class="login-box">
+      <h1>Miglieder-Login</h1>
+      <form>
+        <label>Uni-Mailadresse</label>
+        <input type="text" placeholder="Uni-Mailadresse"/>
+        <label>Passwort</label>
+        <input type="password" placeholder="Passwort"/>
+        <input type="submit" value="Anmelden" />
+      </form>
+    </div>
+  </div>
+</template>

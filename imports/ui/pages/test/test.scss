@@ -1,0 +1,15 @@
+.box-1{
+  height: 500px;
+  width: 500px;
+  background: red;
+}
+
+.box-2{
+  height: 300px;
+  width: 300px;
+  background: yellow;
+  top: -50px;
+  position: absolute;
+  z-index: -1;
+
+}

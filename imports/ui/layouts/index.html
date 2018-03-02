@@ -1,0 +1,16 @@
+<head>
+  <title>flow-router</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+</head>
+
+<template name="applicationLayout">
+<div class="app" style="display: flex; flex-direction: column;">
+  {{> Navigation2}}
+  {{> Template.dynamic template=layout}}
+</div>
+
+  {{> Footer}}
+</template>

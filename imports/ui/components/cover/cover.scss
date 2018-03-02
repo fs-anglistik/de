@@ -1,0 +1,43 @@
+.cover-widget{
+  background: url("/resources/img/cover.png");
+  box-shadow: inset 0px -15px 15px -15px rgba(0, 0, 0, 0.25);
+  animation: animatedBackground 15s linear infinite;
+
+  &::before{
+    content: '';
+    background-color: rgba(255, 255, 255, 0.92);
+  }
+}
+
+@keyframes animatedBackground {
+  from { background-position: 0 0; }
+	to { background-position: -340px 340px; }
+}
+
+@media screen and (min-width: 928px) {
+  .cover-widget{
+    .cover-header__title h1::after{
+      content: "We're your Student Council";
+    }
+
+    .cover-header__title span{
+      display: none;
+    }
+
+    .cover-header__subtitle span{
+      display: none;
+    }
+
+    .cover-header__subtitle h2::after{
+      content: "wi ər jər səˈpɔrt ət ˈjuni 'kɔbləns ˈlænˌdaʊ";
+    }
+  }
+}
+
+@media screen and (min-width: 1328px) {
+  .cover-widget{
+    .cover-header__title h1::after{
+      content: "Hi, we're your Student Council";
+    }
+  }
+}
