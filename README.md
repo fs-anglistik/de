@@ -117,6 +117,8 @@ $ docker build -t fs-anglistik/de:latest .
 ```
 
 ## Start container
+
+```
 $ nano ~/docker-compose.yml
   
 fs-anglistik_de:
@@ -130,3 +132,4 @@ fs-anglistik_de:
     - MONGO_URL=mongodb://fs-anglistik_mongo_prod/
 
 $ cd ~ && docker-compose up -d 
+```
