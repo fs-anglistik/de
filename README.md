@@ -90,6 +90,21 @@ http {
 Install nginx
 $ cd ~ && sudo docker-compose up -d
 
+### Install mongo
+
+$ sudo mkdir -p /opt/mongo/prod/
+$ nano ~/docker-compose.yml
+
+...
+mongodb:
+  container_name: mongodb
+  image: 'mongo:3.4'
+  restart: 'always'
+  volumes:
+    - '/opt/mongo/prod:/data/db'
+
+$ cd ~ && docker-compose up -d
+
 
 ## Create image
 
