@@ -1,4 +1,15 @@
 # de
+## Server Startup
+
+### Update Server
+
+```
+sudo apt-get update -y && sudo apt-get upgrade -y
+```
+
+### Install Docker
+### Install Docker Compose
+
 ## Create image
 
 ```
