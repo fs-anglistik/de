@@ -1,4 +1,4 @@
-FROM node:4.8-slim
+FROM node:8
 COPY . /bundle
 RUN cd /bundle/programs/server && npm install
 ENV PORT=80
