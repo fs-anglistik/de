@@ -90,6 +90,43 @@ http {
 Install nginx
 $ cd ~ && sudo docker-compose up -d
 
+#### Konfigure nginx
+
+```
+sudo nano /opt/nginx/conf.d/de_fs-anglistik_sneak.conf
+ server {
+    listen       80;
+    server_name sneak.fs-anglistik.de www.sneak.fs-anglistik.de;
+    return 301 https://$server_name$request_uri;
+  }
+
+  server {
+    listen 0.0.0.0:443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name sneak.fs-anglistik.de www.sneak.fs-anglistik.de;
+
+    ssl_certificate      /etc/letsencrypt/live/sneak.fs-anglistik.de/fullchain.pem;
+    ssl_certificate_key  /etc/letsencrypt/live/sneak.fs-anglistik.de.de/privkey.pem;
+
+    ssl_session_cache    shared:SSL:1m;
+    ssl_session_timeout  5m;
+
+    ssl_ciphers  HIGH:!aNULL:!MD5;
+    ssl_prefer_server_ciphers  on;
+
+    location / {
+      proxy_set_header Host $http_host;
+      proxy_http_version 1.1;
+      proxy_set_header Upgrade $http_upgrade;
+      proxy_set_header Connection "upgrade";
+      proxy_set_header X-NginX-Proxy true;
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Forwarded-Proto $scheme;
+      proxy_pass http://fs_anglistik_de;
+      proxy_redirect off;
+    }
+  }
+```
 ### Install mongo
 
 $ sudo mkdir -p /opt/mongo/prod/
