@@ -1,10 +1,13 @@
 # de
 ## Create image
+
+```
 $ cd /opt/fs-anglistik/source/de/ && git pull
 $ meteor npm install
 $ meteor build /opt/fs-anglistik/build/de/ --directory
 $ cd /opt/fs-anglistik/build/de/bundle && sudo cp /opt/fs-anglistik/source/de/Dockerfile /opt/fs-anglistik/build/de/bundle/
 $ docker build -t fs-anglistik/de:latest .
+```
 
 ## Start container
 $ nano ~/docker-compose.yml
